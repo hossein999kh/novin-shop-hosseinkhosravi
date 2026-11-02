@@ -1,0 +1,12 @@
+/* انیمیشن ورود بخش‌ها هنگام اسکرول */
+[data-scroll-reveal]{opacity:0;transform:translate3d(0,26px,0);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+[data-scroll-reveal].is-revealed{opacity:1;transform:translate3d(0,0,0)}
+[data-scroll-reveal="scale"]{transform:translate3d(0,18px,0) scale(.975)}
+[data-scroll-reveal="scale"].is-revealed{transform:translate3d(0,0,0) scale(1)}
+.product-grid [data-scroll-reveal]{transition-delay:var(--reveal-delay,0ms)}
+.novin-loader{backdrop-filter:blur(8px);transition:opacity .55s ease,visibility .55s ease}
+.novin-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.novin-loader-mark{animation:novin-pulse 1.35s ease-in-out infinite,novin-float 2.4s ease-in-out infinite}
+.novin-loader-track span{animation:novin-load 1.35s ease-in-out infinite}
+@keyframes novin-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){[data-scroll-reveal],[data-scroll-reveal="scale"],.novin-loader,.novin-loader-mark,.novin-loader-track span{transition:none!important;animation:none!important;transform:none!important}[data-scroll-reveal]{opacity:1!important}}

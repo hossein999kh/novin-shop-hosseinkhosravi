@@ -1,0 +1,33 @@
+/* Novin Shop – standalone responsive footer */
+.site-footer{display:block!important;margin:72px auto 0;padding:0 max(22px,calc((100% - 1240px)/2));background:linear-gradient(135deg,#11182c 0%,#1b2440 60%,#22294a 100%);color:#eef0ff;border-top:4px solid #635bff;direction:rtl}
+.site-footer .footer-main{display:grid;grid-template-columns:1.35fr .8fr .9fr 1.1fr;gap:38px;padding:48px 0 38px}
+.site-footer .footer-brand{color:#fff;display:inline-flex}.site-footer .footer-brand small{color:#aeb5ce}
+.site-footer .footer-about p,.site-footer .footer-news p{color:#c0c6da;font-size:12px;line-height:2.15;margin:18px 0}
+.site-footer .footer-trust{display:flex;gap:8px;flex-wrap:wrap}.site-footer .footer-trust span{font-size:10px;color:#e0e3f3;border:1px solid #394360;background:#202a47;border-radius:10px;padding:8px 10px}
+.site-footer .footer-links,.site-footer .footer-news{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+.site-footer .footer-links h3,.site-footer .footer-news h3{font-size:14px;color:#fff;margin:3px 0 9px;font-weight:800}
+.site-footer .footer-links a,.site-footer .footer-links button,.site-footer .footer-links span,.site-footer .footer-links small{font-size:11px;color:#c0c6da;text-decoration:none;background:none;padding:0;text-align:right;line-height:1.9}
+.site-footer .footer-links a:hover,.site-footer .footer-links button:hover{color:#c6c2ff;transform:translateX(-2px)}
+.site-footer .footer-links small{font-size:10px;color:#939db9}
+.site-footer .footer-news form{display:flex;gap:8px;width:100%}.site-footer .footer-news input{min-width:0;width:100%;background:#202a47;border:1px solid #3a4565;color:#fff;border-radius:11px;padding:12px;font-size:11px}.site-footer .footer-news input::placeholder{color:#a3abc2}.site-footer .footer-news .primary{white-space:nowrap;padding:10px 14px;font-size:11px}
+.site-footer .footer-partners{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:20px 0;border-top:1px solid #303a58;border-bottom:1px solid #303a58}.site-footer .footer-partners>span{background:#202a47;border:1px solid #394360;border-radius:10px;padding:9px 13px;color:#e3e6f4;font-size:11px;font-weight:800;direction:ltr}.site-footer .footer-partners>span span{color:#aaa5ff}
+.site-footer .footer-bottom{border:0;padding:19px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#a6aec7;font-size:10px}
+.product-visual .product-real-photo{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:12px;background:#fff;z-index:1}
+@media(max-width:900px){.site-footer .footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}}
+@media(max-width:520px){.site-footer{padding:0 18px;margin-top:45px}.site-footer .footer-main{grid-template-columns:1fr;gap:25px;padding:32px 0}.site-footer .footer-bottom{flex-direction:column}.site-footer .footer-news form{max-width:100%}.site-footer .footer-partners{justify-content:flex-start}}
+
+/* Novin Shop: remove browser-default underlines from site links */
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+}
+/* Keep keyboard navigation visible without underlining link text. */
+a:focus-visible {
+  outline: 2px solid var(--primary, #5267e8);
+  outline-offset: 3px;
+  border-radius: 4px;
+}

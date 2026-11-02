@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="تصویر گوشی هوشمند">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f7fb"/><stop offset="1" stop-color="#e3eaf3"/></linearGradient>
+ <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#353d4a"/><stop offset=".5" stop-color="#111827"/><stop offset="1" stop-color="#596579"/></linearGradient>
+ <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6dd5ed"/><stop offset=".45" stop-color="#2193b0"/><stop offset="1" stop-color="#243b75"/></linearGradient>
+ <filter id="shadow" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#18263b" flood-opacity=".24"/></filter>
+</defs>
+<rect width="800" height="800" rx="52" fill="url(#bg)"/>
+<circle cx="400" cy="390" r="270" fill="#fff" opacity=".48"/>
+<g transform="translate(250 92) rotate(-8 150 300)" filter="url(#shadow)">
+ <rect x="0" y="0" width="300" height="610" rx="48" fill="url(#body)"/>
+ <rect x="10" y="10" width="280" height="590" rx="40" fill="#090f1b"/>
+ <rect x="21" y="22" width="258" height="566" rx="32" fill="url(#screen)"/>
+ <path d="M21 410 Q135 250 279 330 L279 588 L21 588Z" fill="#1b3974" opacity=".65"/>
+ <path d="M21 475 Q150 335 279 405 L279 588 L21 588Z" fill="#101f4c" opacity=".65"/>
+ <path d="M21 110 Q130 25 279 95 L279 245 Q130 185 21 270Z" fill="#a9efff" opacity=".19"/>
+ <rect x="112" y="13" width="76" height="13" rx="7" fill="#080d17"/>
+ <circle cx="202" cy="20" r="5" fill="#192335"/>
+ <rect x="105" y="575" width="90" height="4" rx="2" fill="#dbeafe" opacity=".55"/>
+</g>
+<g transform="translate(535 170) rotate(12 70 145)" filter="url(#shadow)">
+ <rect x="0" y="0" width="145" height="290" rx="28" fill="#202a39"/>
+ <rect x="7" y="7" width="131" height="276" rx="23" fill="#0d1522"/>
+ <rect x="14" y="14" width="117" height="262" rx="19" fill="#263d69"/>
+ <circle cx="42" cy="43" r="14" fill="#0a1220" stroke="#8192a9" stroke-width="4"/><circle cx="42" cy="43" r="6" fill="#6ebbd2"/>
+ <circle cx="79" cy="43" r="14" fill="#0a1220" stroke="#8192a9" stroke-width="4"/><circle cx="79" cy="43" r="6" fill="#6ebbd2"/>
+ <circle cx="42" cy="80" r="14" fill="#0a1220" stroke="#8192a9" stroke-width="4"/><circle cx="42" cy="80" r="6" fill="#6ebbd2"/>
+</g>
+<text x="400" y="735" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#334155">SMARTPHONE</text>
+</svg>

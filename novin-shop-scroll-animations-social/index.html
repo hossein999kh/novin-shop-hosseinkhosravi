@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e91e4d">
+  <title>نوین‌شاپ | فروشگاه موبایل، لوازم جانبی و جم فری فایر</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="creator-credit.css">
+<link rel="stylesheet" href="scroll-reveal.css">
+<link rel="stylesheet" href="product-details.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="icon" type="image/svg+xml" href="assets/novin-favicon.svg"></head>
+<body>
+<div class="creator-credit-bar" role="note" aria-label="اطلاعات طراح وب‌سایت">
+  <div class="creator-credit-inner">
+    <div class="creator-credit-intro">
+      <span class="creator-credit-mark" aria-hidden="true">✦</span>
+      <span>طراحی و توسعه توسط <strong>حسین خسروی</strong></span>
+      <b class="creator-credit-role">Front-End Developer</b>
+    </div>
+    <nav class="creator-credit-links" aria-label="راه‌های ارتباط با طراح">
+      <a class="creator-contact creator-email" href="mailto:ffh2hossein@gmail.com" aria-label="ارسال ایمیل به حسین خسروی">
+        <svg class="creator-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z"/><path d="m4 7 8 6 8-6"/></svg>
+        <span class="creator-contact-label">ایمیل</span><span class="creator-contact-value" dir="ltr">ffh2hossein@gmail.com</span>
+      </a>
+      <a class="creator-contact creator-telegram" href="https://t.me/hossein999v" target="_blank" rel="noopener noreferrer" aria-label="ارتباط در تلگرام با شناسه hossein999v">
+        <svg class="creator-icon creator-brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M21.7 4.4 18.5 20c-.24 1.1-.88 1.36-1.78.85l-4.92-3.63-2.38 2.29c-.26.26-.48.48-.98.48l.35-5.01 9.12-8.24c.4-.35-.09-.55-.62-.2L6.02 13.7 1.17 12.2c-1.05-.33-1.07-1.05.22-1.56L20.35 3.2c.88-.32 1.65.21 1.35 1.2Z"/></svg>
+        <span class="creator-contact-label">تلگرام</span><span class="creator-contact-value" dir="ltr">@hossein999v</span>
+      </a>
+      <a class="creator-contact creator-rubika" href="https://rubika.ir/hossein999v" target="_blank" rel="noopener noreferrer" aria-label="ارتباط در روبیکا با شناسه hossein999v">
+        <svg class="creator-icon creator-brand-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="currentColor" stroke="none"/><path d="M7 6.8h6.1a4 4 0 0 1 1.3 7.8l3 3.1h-4l-3.1-3.5H10v3.5H7V6.8Zm3 2.8v2.1h3a1.05 1.05 0 1 0 0-2.1h-3Z" fill="#fff" stroke="none"/></svg>
+        <span class="creator-contact-label">روبیکا</span><span class="creator-contact-value" dir="ltr">@hossein999v</span>
+      </a>
+    </nav>
+  </div>
+</div>
+<header class="topbar">
+  <a class="brand" href="#" data-view="store"><span class="brand-mark">N</span><span>نوین‌شاپ<small>فروشگاه دیجیتال</small></span></a>
+  <label class="search"><span>⌕</span><input id="searchInput" placeholder="جست‌وجوی موبایل، هدفون، شارژر..."></label>
+  <div class="header-actions">
+    <button class="icon-btn header-support-link" id="chatOpen" title="پشتیبانی">🎧 <span class="hide-mobile">پشتیبانی</span></button>
+    <a class="icon-btn announcement-top-tab" id="announcementOpen" href="announcements.html" title="رفتن به صفحه اعلان‌ها">🔔 <span class="hide-mobile">اعلان‌ها</span><b id="announcementCount" class="announcement-count" hidden>۰</b></a>
+    <button class="cart-btn" id="cartOpen">🛒 سبد خرید <b id="cartCount">۰</b></button>
+    <button class="icon-btn" id="accountOpen">👤 ورود / حساب من</button>
+    <button class="admin-shortcut" data-view="admin">⚙️ پنل مدیریت ↗</button>
+  </div>
+</header>
+<section id="announcementPage" class="announcement-page" hidden aria-label="صندوق اعلان‌های نوین‌شاپ">
+  <div class="announcement-page-top"><button type="button" class="announcement-back" id="announcementBack">← بازگشت به فروشگاه</button><div><span class="announcement-page-kicker">NOVIN SHOP · NOTIFICATIONS</span><h1>اعلان‌های من <span id="announcementPageCount">۰</span></h1><p>تخفیف‌ها، خبرهای فروشگاه و اطلاع‌رسانی‌های مهم را اینجا دنبال کن.</p></div><span class="announcement-page-bell">🔔</span></div>
+  <div class="announcement-page-shell"><aside class="announcement-page-side"><b>صندوق اعلان‌ها</b><button type="button" class="announcement-filter active" data-announcement-filter="all">همه اعلان‌ها <span id="announcementFilterAll">۰</span></button><button type="button" class="announcement-filter" data-announcement-filter="sale">تخفیف‌ها و پیشنهادها</button><button type="button" class="announcement-filter" data-announcement-filter="success">خبرهای خوب</button><button type="button" class="announcement-filter" data-announcement-filter="warning">هشدارهای مهم</button><button type="button" class="announcement-filter" data-announcement-filter="info">اطلاعیه‌های عمومی</button></aside><div class="announcement-page-content"><div class="announcement-page-list-head"><div><h2 id="announcementListTitle">همه اعلان‌ها</h2><small>جدیدترین پیام‌ها در ابتدای فهرست هستند.</small></div><button type="button" id="announcementMarkAllRead" class="outline small">✓ خواندن همه</button><button type="button" id="announcementRefresh" class="outline small">↻ تازه‌سازی</button></div><div id="announcementPageList" class="announcement-page-list" aria-live="polite"></div></div></div>
+</section>
+<div id="novinUsdTicker" style="padding:9px 18px;text-align:center;background:#f5f7fb;border-bottom:1px solid #e5e9f2;color:#25334a;font-size:13px">💵 دلار بازار آزاد: در حال دریافت نرخ…</div><main id="storeView">
+  <section id="announcementArea" class="announcement-area" aria-live="polite"></section>
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow">تجربه خرید هوشمند</span><h1>تکنولوژی،<br><em>نزدیک‌تر از همیشه.</em></h1><p>محصولات دیجیتال منتخب، خرید ساده و پشتیبانی همراه شما.</p><div class="hero-actions"><button type="button" class="primary" id="shopNow">مشاهده محصولات <span>←</span></button><span class="hero-note">ارسال سریع · ضمانت اصالت در نسخه نمایشی</span></div></div>
+    <div class="hero-art"><div class="orb"></div><div class="phone phone-back"></div><div class="phone phone-front"><div class="phone-camera"></div><div class="phone-screen"><span>09:41</span><div class="screen-sun"></div><b>Made for<br>your day.</b></div></div><div class="float-tag">✦ انتخاب ویژه</div><div class="float-price" id="heroFloatPrice">از ۱۲,۹۰۰,۰۰۰ تومان</div></div><div class="hero-slider-controls"><button type="button" id="heroPrev" aria-label="اسلاید قبلی">→</button><div class="hero-dots"><button type="button" class="active" data-hero-slide="0" aria-label="اسلاید ۱"></button><button type="button" data-hero-slide="1" aria-label="اسلاید ۲"></button><button type="button" data-hero-slide="2" aria-label="اسلاید ۳"></button></div><button type="button" id="heroNext" aria-label="اسلاید بعدی">←</button></div>
+  </section>
+<nav class="category-nav category-icon-nav" aria-label="دسته‌بندی محصولات">
+  <button class="category active" data-category="همه"><span class="category-icon">🛍️</span><span>همه محصولات</span></button>
+  <button class="category" data-category="موبایل"><span class="category-icon">📱</span><span>موبایل</span></button>
+  <button class="category" data-category="هدفون"><span class="category-icon">🎧</span><span>هدفون و هندزفری</span></button>
+  <button class="category" data-category="شارژر"><span class="category-icon">🔌</span><span>شارژر و کابل</span></button>
+  <button class="category" data-category="لوازم جانبی"><span class="category-icon">🧩</span><span>لوازم جانبی</span></button>
+  <button class="category" data-category="ساعت هوشمند"><span class="category-icon">⌚</span><span>ساعت هوشمند</span></button>
+  <a class="category freefire-nav-link" href="free-fire-gems.html"><span class="category-icon">💎</span><span>جم فری فایر</span></a>
+  <a class="category guide-nav-link" href="purchase-guide.html"><span class="category-icon">?</span><span>راهنمای خرید</span></a>
+</nav>
+  <section id="flashSaleSection" class="flash-sale-section" aria-label="پیشنهادهای شگفت‌انگیز"></section>
+  <section class="trust-row"><div><b>🛡️</b><span>تضمین کیفیت<small>انتخاب هوشمندانه</small></span></div><div><b>🚚</b><span>ارسال سریع<small>پیگیری آسان سفارش</small></span></div><div><b>💬</b><span>پشتیبانی دوستانه<small>همراه خرید شما</small></span></div><div><b>↩️</b><span>۷ روز فرصت بررسی<small>قوانین نمونه فروشگاه</small></span></div></section>
+  <section class="section-head" id="products"><div><span class="eyebrow">✨ ویترین نوین‌شاپ</span><h2><span class="section-heading-icon">🛍️</span> محصولات منتخب</h2><p>محصول دلخواهت را پیدا کن.</p></div><div class="filters"><select id="sortSelect" aria-label="مرتب‌سازی"><option value="featured">پیشنهادی</option><option value="price-low">ارزان‌ترین</option><option value="price-high">گران‌ترین</option><option value="name">نام محصول</option><option value="rating">بالاترین امتیاز</option></select><select id="stockFilter" aria-label="موجودی"><option value="all">همه محصولات</option><option value="in">فقط موجود</option></select></div></section>
+  <div class="active-filter" id="filterLabel">همه محصولات</div>
+  <section id="productGrid" class="product-grid"></section>
+  <section id="bestSellersSection" class="best-sellers-section" aria-label="پرفروش‌ترین‌ها"></section>
+  <section class="newsletter"><div><span class="eyebrow">خبرهای خوب</span><h2>از پیشنهادهای تازه جا نمان.</h2><p>برای نمایش نسخه آزمایشی، ایمیل خود را وارد کنید.</p></div><form id="newsletterForm"><input type="email" required placeholder="ایمیل شما"><button type="submit" class="primary">عضویت</button></form></section>
+  <footer class="site-footer"><div class="footer-main"><div class="footer-about"><a class="brand footer-brand" href="index.html"><span class="brand-mark">N</span><span>نوین‌شاپ<small>فروشگاه دیجیتال</small></span></a><p>انتخابی ساده برای دنیای دیجیتال شما. از انتخاب تا خرید، همراه مطمئن شما در دنیای دیجیتال. برای خرید واقعی، وضعیت پرداخت و موجودی را پیش از استفاده بررسی کنید.</p><div class="footer-trust"><span>✓ محصولات منتخب</span><span>◈ پرداخت امن</span><span>☏ پشتیبانی آنلاین</span></div></div><div class="footer-links"><h3>دسترسی سریع</h3><a href="#products">مشاهده محصولات</a><a href="#products" data-footer-category="موبایل">گوشی‌های موبایل</a><a href="#products" data-footer-category="هدفون">هدفون و هندزفری</a><a href="free-fire-gems.html">خرید جم فری فایر 💎</a><a href="blog.html">مجله نوین‌شاپ</a><button type="button" id="footerSupport">گفت‌وگو با پشتیبانی</button></div><div class="footer-links"><h3>خدمات مشتریان</h3><a href="./rahnamai-by.html">راهنمای خرید</a><a href="./cal-me.html">تماس با ما و پشتیبانی</a><a href="team.html" target="_blank" rel="noopener">طراح و توسعه‌دهنده نوین‌شاپ</a><button type="button" id="footerTrack">پیگیری سفارش</button><span>پشتیبانی مشتریان و راهنمای سفارش</span><small>برای پیگیری، شماره سفارش خود را آماده داشته باشید.</small></div><div class="footer-news"><h3>همراه نوین‌شاپ</h3><p>برای دریافت پیشنهادهای تازه، ایمیل خود را ثبت کنید.</p><form id="footerNewsletter"><input type="email" name="email" placeholder="ایمیل شما" required><button type="submit" class="primary">عضویت</button></form></div></div><div class="footer-partners" aria-label="خدمات نوین‌شاپ"><span>novin<span>next</span></span><span>novin<span>pay</span></span><span>novin<span>club</span></span><span>novin<span>plus</span></span><span>novin<span>express</span></span><span>novin<span>mag</span></span><span>novin<span>care</span></span><span>novin<span>business</span></span><span>novin<span>style</span></span></div><div class="footer-bottom"><span>© ۲۰۲۶ نوین‌شاپ · طراحی و توسعه: <a href="team.html">حسین خسروی</a></span><span>درگاه شبیه‌سازی‌شده · بدون تراکنش واقعی</span></div></footer>
+</main>
+
+<main id="adminView" class="admin-layout hidden">
+  <aside class="admin-sidebar"><div class="admin-title"><span class="brand-mark">N</span><div><b>مرکز مدیریت</b><small>نوین‌شاپ · نسخه آزمایشی</small></div></div>
+    <button class="admin-nav active" data-panel="overview">▦ <span>نمای کلی</span></button>
+    <button class="admin-nav" data-panel="products">▣ <span>مدیریت محصولات</span></button>
+    <button class="admin-nav" data-panel="inventory">📦 <span>انبار و موجودی</span></button>
+    <button class="admin-nav" data-panel="deals">％ <span>شگفت‌انگیزها</span></button>
+    <button class="admin-nav" data-panel="plus">✦ <span>اشتراک‌های نوین پلاس</span></button>
+    <button class="admin-nav" data-panel="orders">▤ <span>سفارش‌ها</span><i id="pendingBadge">0</i></button>
+    <button class="admin-nav" data-panel="delivery">🚚 <span>تحویل کالاها به مشتری</span></button>
+    <button class="admin-nav" data-panel="parcelCheck">🔎 <span>استعلام وضعیت مرسوله</span></button>
+    <button class="admin-nav" data-panel="freefire">💎 <span>سایت جم فری فایر</span><i id="freefireBadge">0</i></button>
+    <button class="admin-nav" data-panel="shipping">🚚 <span>شرکت پست و ارسال</span></button>
+    <button class="admin-nav" data-panel="postAutomation">🤖 <span>ارسال هوشمند پست</span></button>
+    <button class="admin-nav" data-panel="customers">♙ <span>مشتریان</span></button>
+    <button class="admin-nav" data-panel="verification">🪪 <span>مدیریت احراز هویت‌ها</span></button>
+    <button class="admin-nav" data-panel="goldChart">📈 <span>نمودارهای بازار</span></button>
+    <button class="admin-nav" data-panel="insurance">🛡 <span>بیمه مشتریان</span></button>
+    <button class="admin-nav" data-panel="points">★ <span>امتیازات مشتریان</span></button>
+    <button class="admin-nav" data-panel="userRanks">♛ <span>مقام کاربران</span></button>
+    <button class="admin-nav" data-panel="loyalty">🎁 <span>باشگاه مشتریان و استعلام تخفیف‌ها</span></button>
+    <button class="admin-nav" data-panel="reviews">★ <span>نظرات مشتریان</span></button>
+    <button class="admin-nav" data-panel="messages">☏ <span>گفت‌وگوها</span><i id="messageBadge">0</i></button>
+    <button class="admin-nav" data-panel="supportSettings">🛟 <span>مدیریت پشتیبانی</span></button>
+    <button class="admin-nav" data-panel="contact">✉ <span>مدیریت معرفی مدیران و ارتباطات</span></button>
+    <button class="admin-nav" data-panel="discounts">％ <span>کدهای تخفیف</span></button>
+    <button class="admin-nav" data-panel="campaigns">🎯 <span>کمپین‌های فروش</span></button>
+    <button class="admin-nav" data-panel="announcements">📢 <span>اطلاعیه‌های همگانی</span></button>
+    <button class="admin-nav" data-panel="reports">▥ <span>گزارش‌ها</span></button>
+    <button class="admin-nav" data-panel="activity">◷ <span>ورود و خروج‌ها</span></button>
+    <button class="admin-nav" data-panel="simCustomers">🤖 <span>شبیه‌ساز مشتریان آزمایشی</span></button>
+    <button class="admin-nav" data-panel="security">🔐 <span>امنیت و پشتیبان</span></button>
+    <button class="admin-nav" data-panel="wallets">◈ <span>کیف پول مشتریان</span></button>
+    <a class="admin-team-link" href="team.html" target="_blank" rel="noopener">♙ طراح و توسعه‌دهنده نوین‌شاپ ↗</a><div class="sidebar-bottom"><div class="demo-pill"><span></span> حالت نمایشی فعال</div><button id="backToStore" class="outline light">← بازگشت به فروشگاه</button></div>
+  </aside>
+  <section class="admin-main">
+    <header class="admin-header"><div><div class="breadcrumb">نوین‌شاپ / مدیریت</div><h1 id="adminHeading">نمای کلی</h1></div><div class="admin-header-right"><span class="admin-date" id="adminDate"></span><button class="primary small" id="quickAdd">＋ محصول جدید</button></div></header>
+    <div id="adminContent"></div>
+  </section>
+</main>
+
+<div class="overlay" id="cartOverlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="سبد خرید"><div class="drawer-head"><div><span class="eyebrow">خرید شما</span><h2>سبد خرید <span id="drawerCount"></span></h2></div><button class="close-btn" data-close="cart">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-bottom"><div class="coupon-row"><input id="couponInput" placeholder="کد تخفیف"><button id="applyCoupon" class="outline">اعمال</button></div><div class="cart-extra-actions"><button id="clearCartBtn" class="outline small" type="button">خالی‌کردن سبد</button><a href="purchase-guide.html" target="_blank" rel="noopener">راهنمای خرید ←</a></div><p id="couponMessage" class="muted"></p><div class="total-row"><span>جمع کالاها</span><b id="cartSubtotal">۰ تومان</b></div><div class="total-row"><span>ارسال</span><b id="shippingCost">۰ تومان</b></div><div class="total-row discount-row"><span>تخفیف</span><b id="discountAmount">۰ تومان</b></div><div class="total-row grand-total"><span>مبلغ قابل پرداخت</span><b id="cartTotal">۰ تومان</b></div><button id="checkoutBtn" class="primary full">ادامه و ثبت سفارش ←</button><small>پرداخت این فروشگاه کاملاً آزمایشی است.</small></div></aside>
+
+<div class="modal-backdrop" id="modalBackdrop"><section class="modal" id="modalContent" role="dialog" aria-modal="true"></section></div>
+
+<div class="chat-widget" id="chatWidget"><div class="chat-head"><div class="chat-avatar">N</div><div><b>پشتیبانی نوین‌شاپ</b><small><span class="online-dot"></span> آماده پاسخ‌گویی در نسخه آزمایشی</small></div><button id="chatClose" class="chat-close">×</button></div><div id="chatMessages" class="chat-messages"></div><div style="display:flex;justify-content:flex-end;padding:4px 10px"><button type="button" id="deleteMyChatHistory" class="text-button">حذف تاریخچه پیام‌های من</button></div><div class="chat-quick-actions"><button type="button" data-support-topic="پیگیری سفارش">پیگیری سفارش</button><button type="button" data-support-topic="هزینه و زمان ارسال">ارسال و پست</button><button type="button" data-support-topic="گارانتی و مرجوعی">گارانتی</button><button type="button" data-support-topic="روش پرداخت آزمایشی">پرداخت</button></div><form id="chatForm" class="chat-compose"><label class="chat-file-button" title="ارسال تصویر">📎<input id="chatFileInput" type="file" accept="image/*" hidden></label><span class="chat-file-name" id="chatFileName"></span><input id="chatInput" placeholder="پیامت را بنویس..." autocomplete="off" required><button type="submit" class="primary" aria-label="ارسال پیام">➤</button></form></div>
+<button id="floatingSupport" class="floating-support" type="button" aria-label="تماس با پشتیبانی" title="پشتیبانی نوین‌شاپ"><span>♧</span></button>
+<div id="toast" class="toast"></div>
+<div id="novinLoader" class="novin-loader" role="status" aria-live="polite"><div class="novin-loader-mark">N</div><div class="novin-loader-track"><span></span></div><b>نوین‌شاپ</b><small>در حال آماده‌سازی تجربه خرید شما…</small></div>
+<script src="customer-bot.js"></script>
+<script src="app.js"></script>
+<script src="scroll-reveal.js"></script>
+<script src="simulator-controls.js"></script>
+</body>
+</html>

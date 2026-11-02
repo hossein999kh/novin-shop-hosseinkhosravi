@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b32aa8"><title>خرید اشتراک نوین پلاس</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f3f5;color:#20243a;font-family:'Vazirmatn','IRANSansX','IRANSans',Tahoma,Arial,sans-serif;line-height:1.9}
+.wrap{max-width:980px;margin:28px auto;padding:0 16px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.brand{font-size:25px;font-weight:900;color:#b12aa5}.brand small{display:block;font-size:11px;color:#777;font-weight:400;margin-top:6px}
+.back{border:0;background:#fff;border-radius:12px;padding:11px 16px;cursor:pointer;color:#555}
+.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.8fr);gap:18px;align-items:start}
+.card{background:#fff;border:1px solid #e5dce7;border-radius:18px;padding:22px;box-shadow:0 8px 30px #25152b0a}
+h1{font-size:24px;margin:0 0 8px;color:#b12aa5}.sub{color:#70778a;font-size:13px;line-height:2;margin:0 0 20px}
+.plans{display:grid;gap:11px}.plan{display:flex;align-items:center;gap:12px;border:1px solid #e4d5e4;border-radius:15px;padding:15px;cursor:pointer;position:relative}
+.plan.selected{border:1.5px solid #bd2aae;background:#fffaff}.radio{width:22px;height:22px;border:2px solid #55577a;border-radius:50%;flex:0 0 22px}.plan.selected .radio{border:6px solid #b12aa5}
+.plan-main{flex:1}.plan-name{font-size:14px;font-weight:800}.plan-note{font-size:11px;color:#85818d;margin-top:6px}.price{text-align:left;white-space:nowrap;font-size:14px;font-weight:900}.old{font-size:11px;color:#aaa;text-decoration:line-through;margin-left:6px}.discount{display:inline-block;background:#d93642;color:#fff;border-radius:20px;padding:3px 7px;font-size:10px;margin-right:5px}
+.ribbon{background:#b12aa5;color:#fff;padding:8px 13px;border-radius:12px 12px 0 0;font-size:12px;font-weight:bold;margin:-15px -15px 10px}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;margin-top:20px;font-size:12px}.benefits span:before{content:'✓';color:#219653;font-weight:bold;margin-left:7px}
+.side-title{font-size:17px;margin:0 0 16px}.side-list{list-style:none;padding:0;margin:0;display:grid;gap:14px;font-size:12px;color:#697184}.side-list li:before{content:'•';color:#b12aa5;font-size:20px;vertical-align:middle;margin-left:8px}
+.delivery{margin-top:24px;padding:15px;border-radius:13px;background:#faf6fb;color:#696477;font-size:12px;line-height:2}
+.bottom{position:sticky;bottom:0;margin-top:18px;background:#fff;border:1px solid #e6e2e8;border-radius:16px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 -8px 30px #2221}
+.total small{display:block;color:#747989;font-size:11px;margin-bottom:6px}.total b{font-size:18px;color:#25243a}
+.buy{border:0;border-radius:12px;background:#b12aa5;color:#fff;font-weight:bold;font-size:15px;padding:17px 28px;cursor:pointer}.buy:disabled{opacity:.5;cursor:not-allowed}
+.msg{font-size:12px;color:#c03945;margin-top:12px;min-height:18px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.wrap{margin:14px auto}.card{padding:16px}.benefits{grid-template-columns:1fr 1fr}.bottom{align-items:stretch;flex-direction:column}.buy{width:100%}.top{align-items:flex-start}}
+</style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="icon" type="image/svg+xml" href="assets/novin-favicon.svg"></head>
+<body><main class="wrap">
+<header class="top"><div class="brand">✧ پلاس<small>عضویت ویژه نوین‌شاپ</small></div><button class="back" onclick="history.length>1?history.back():location.href='index.html'">× بستن</button></header>
+<div class="layout">
+<section class="card"><h1>با نوین پلاس، مزایای بیشتری بگیر!</h1><p class="sub">مدت اشتراک موردنظرت را انتخاب کن. پس از ادامه، درگاه پرداخت موردنظر را انتخاب می‌کنی.</p>
+<div class="plans" id="plans">
+<label class="plan" data-plan="یک‌ماهه"><span class="radio"></span><span class="plan-main"><span class="plan-name">اشتراک یک ماهه</span><span class="plan-note">مناسب برای شروع</span></span><span class="price" id="price1"></span></label>
+<label class="plan selected" data-plan="سه‌ماهه"><span class="radio"></span><span class="plan-main"><span class="plan-name">اشتراک سه ماهه</span><span class="plan-note">انتخاب محبوب اعضا</span></span><span class="price" id="price3"></span></label>
+<label class="plan" data-plan="شش‌ماهه"><span class="radio"></span><span class="plan-main"><span class="plan-name">اشتراک شش ماهه</span><span class="plan-note">صرفه‌جویی بیشتر</span></span><span class="price" id="price6"></span></label>
+<label class="plan" data-plan="یک‌ساله"><span class="radio"></span><span class="plan-main"><span class="plan-name">اشتراک یک ساله</span><span class="plan-note">بیشترین مزایا در تمام سال</span></span><span class="price" id="price12"></span></label>
+</div><div class="benefits"><span>ارسال رایگان سفارش‌های واجد شرایط</span><span>پیشنهادهای اختصاصی اعضا</span><span>اولویت در پشتیبانی</span><span>دسترسی به تخفیف‌های ویژه</span></div>
+<div class="msg" id="message"></div></section>
+<aside class="card"><h2 class="side-title">مزایای اشتراک پلاس در هر ماه</h2><ul class="side-list"><li>ارسال رایگان سفارش‌های واجد شرایط</li><li>پیشنهادهای اختصاصی اعضا</li><li>تخفیف‌های ویژه و مناسبتی</li><li>پشتیبانی اختصاصی</li><li>دسترسی به طرح‌های ویژه خرید</li></ul><div class="delivery">با خرید اشتراک، مزایا برای حساب کاربری واردشده فعال می‌شود. وضعیت اشتراک پس از تأیید پرداخت در پروفایل قابل مشاهده خواهد بود.</div></aside>
+</div>
+<footer class="bottom"><div class="total"><small>مبلغ قابل پرداخت</small><b id="total">۴۹۹٬۰۰۰ تومان</b></div><button class="buy" id="buy">ادامه و انتخاب درگاه پرداخت ←</button></footer>
+</main>
+<script>
+(()=>{const fmt=n=>Number(n||0).toLocaleString('fa-IR');const qs=new URLSearchParams(location.search);let selected=qs.get('plan')||'سه‌ماهه';let state={};try{state=JSON.parse(localStorage.getItem('novin_state_v2')||'{}')}catch{}let prices={'یک‌ماهه':199000,'سه‌ماهه':499000,'شش‌ماهه':899000,'یک‌ساله':1599000};if(state.plus_plan_prices&&typeof state.plus_plan_prices==='object')prices={...prices,...state.plus_plan_prices};try{const saved=JSON.parse(localStorage.getItem('novin_plus_plan_prices')||'null');if(saved&&typeof saved==='object')prices={...prices,...saved};}catch{}const legacy=Number(localStorage.getItem('novin_plus_price'));if(legacy>0)prices['سه‌ماهه']=legacy;const labels={'یک‌ماهه':'price1','سه‌ماهه':'price3','شش‌ماهه':'price6','یک‌ساله':'price12'};let user=state.session||null;const subs=Array.isArray(state.plus_subscriptions)?state.plus_subscriptions:(()=>{try{return JSON.parse(localStorage.getItem('novin_plus_subscriptions')||'[]')}catch{return[]}})();const norm=s=>String(s||'').replace(/\D/g,'').replace(/^0/,'');const active=user&&subs.some(s=>norm(s.phone)===norm(user.phone)&&s.status==='active'&&(!s.expiresAt||Number(s.expiresAt)>Date.now()));if(active){document.getElementById('message').textContent='اشتراک پلاس این حساب هم‌اکنون فعال است.';document.getElementById('buy').disabled=true;}
+function update(){document.querySelectorAll('.plan').forEach(el=>el.classList.toggle('selected',el.dataset.plan===selected));document.getElementById('total').textContent=fmt(prices[selected])+' تومان'}Object.entries(labels).forEach(([plan,id])=>document.getElementById(id).textContent=fmt(prices[plan])+' تومان');document.querySelectorAll('.plan').forEach(el=>el.addEventListener('click',()=>{selected=el.dataset.plan;update()}));update();
+document.getElementById('buy').addEventListener('click',()=>{if(!user||!user.phone){document.getElementById('message').textContent='برای خرید اشتراک ابتدا در نوین‌شاپ وارد حساب کاربری شو.';return}const price=Number(prices[selected]);if(!Number.isFinite(price)||price<=0){document.getElementById('message').textContent='قیمت اشتراک معتبر نیست.';return}const now=Date.now(),number='PLUS'+String(now).slice(-8);const pending={id:now,number,type:'plus_subscription',plan:selected,amount:price,total:price,customer:{name:user.name||'کاربر نوین‌شاپ',phone:user.phone},payment:'demo',paymentGateway:'در انتظار انتخاب درگاه',createdAt:now,items:[{id:'novin-plus-'+selected,name:'اشتراک نوین پلاس · '+selected,qty:1,quantity:1,price}]};try{localStorage.setItem('novin_pending_demo_payment',JSON.stringify(pending));}catch(e){document.getElementById('message').textContent='ذخیره سفارش ممکن نشد؛ فضای مرورگر را بررسی کن.';return}location.href='payment.html';});})();
+</script></body></html>

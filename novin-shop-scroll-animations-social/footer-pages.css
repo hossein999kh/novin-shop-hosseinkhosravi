@@ -1,0 +1,25 @@
+/* Supplemental fallback styling for Novin Shop footer pages. */
+.site-info-page{font-family:inherit;color:var(--ink,#172033)}
+.site-info-page a{transition:all .18s ease}
+.site-info-page .site-info-brand,.site-info-page .site-info-back{text-decoration:none}
+.site-info-page .site-info-content{width:100%;box-sizing:border-box}
+.site-info-page .site-page-card{box-sizing:border-box}
+.site-info-page .site-page-actions a{cursor:pointer}
+.site-info-page .site-info-footer a{display:inline-flex;align-items:center;justify-content:center}
+@media(max-width:560px){.site-info-page .site-info-header{gap:12px;flex-wrap:wrap}.site-info-page .site-info-footer{flex-wrap:wrap}}
+
+/* Novin Shop: remove browser-default underlines from site links */
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+}
+/* Keep keyboard navigation visible without underlining link text. */
+a:focus-visible {
+  outline: 2px solid var(--primary, #5267e8);
+  outline-offset: 3px;
+  border-radius: 4px;
+}

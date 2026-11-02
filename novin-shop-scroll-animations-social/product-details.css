@@ -1,0 +1,206 @@
+/* Novin Shop — Product detail experience
+   مستقل از استایل عمومی؛ الهام‌گرفته از الگوهای فروشگاه‌های بزرگ، با هویت نوین‌شاپ */
+.detail-page{--pd-red:#ef4056;--pd-ink:#232b3a;--pd-muted:#818b9a;--pd-line:#e8eaee;--pd-soft:#f7f8fa;direction:rtl;text-align:right;color:var(--pd-ink);font-family:inherit;max-width:1440px;margin:0 auto;padding:clamp(12px,2vw,28px);background:#fff;border-radius:18px;box-sizing:border-box}
+.detail-page *{box-sizing:border-box}
+.detail-page button,.detail-page input,.detail-page select,.detail-page textarea{font:inherit}
+.detail-page button{cursor:pointer}
+.detail-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;padding-bottom:13px;border-bottom:1px solid var(--pd-line)}
+.detail-breadcrumb{display:flex;gap:9px;align-items:center;flex-wrap:wrap;color:#8992a0;font-size:12px;line-height:1.9}.detail-breadcrumb span{color:#c0c5cc}
+.detail-page .close-btn{width:38px;height:38px;flex:0 0 38px;border:1px solid var(--pd-line);border-radius:11px;background:#fff;color:#626d7b;font-size:23px;line-height:1;transition:.2s}.detail-page .close-btn:hover{background:#fff2f4;color:var(--pd-red);border-color:#ffd3da}
+.detail-layout{display:grid;grid-template-columns:minmax(220px,270px) minmax(300px,1fr) minmax(250px,330px);grid-template-areas:"purchase info gallery";gap:clamp(16px,2vw,28px);align-items:start}
+.detail-purchase{grid-area:purchase;position:sticky;top:14px;display:flex;flex-direction:column;gap:13px;padding:18px;border:1px solid #e4e7eb;border-radius:14px;background:#fff;box-shadow:0 3px 14px #1d29390a;min-width:0}
+.detail-seller{display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--pd-line)}.seller-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:#f2f4f7;color:#596579;font-size:19px}.detail-seller>div{display:grid;gap:5px;min-width:0}.detail-seller b{font-size:13px}.detail-seller small{font-size:10px;color:#15966a}.detail-seller strong{font-size:11px;color:#d28b12;white-space:nowrap}
+.detail-availability{font-size:11px;color:#15966a;font-weight:700;padding:4px 0}.detail-purchase-price{font-size:23px;font-weight:900;letter-spacing:-.4px;color:#202838}.detail-purchase-price small{font-size:11px;font-weight:500;color:#7c8491}.detail-old-price{font-size:12px;color:#9aa1ab;text-decoration:line-through;margin-top:-10px}.detail-delivery{display:flex;align-items:center;gap:10px;padding:12px;background:#f8f9fb;border:1px solid #eef0f3;border-radius:11px}.detail-delivery>span{display:grid;gap:4px}.detail-delivery b{font-size:11px}.detail-delivery small{font-size:10px;color:var(--pd-muted);line-height:1.8}.product-insurance-box{display:grid;gap:6px;padding:12px;border:1px solid #e8edf4;border-radius:11px;background:#fbfcfe;font-size:11px}.product-insurance-box b{font-size:12px}.product-insurance-box span{color:#727d8b;line-height:1.8}.product-insurance-box strong{color:#303b4b}.detail-page .detail-add{width:100%;min-height:47px;border:1px solid var(--pd-red);border-radius:10px;background:var(--pd-red);color:white;font-size:13px;font-weight:800;box-shadow:0 4px 10px #ef405622;transition:.2s}.detail-page .detail-add:hover{background:#dc3049;transform:translateY(-1px)}.detail-page .detail-add:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}.detail-page .detail-wish{width:100%;min-height:42px;border:1px solid #dfe3e8;border-radius:10px;background:#fff;color:#596579;font-size:11px;font-weight:700}.detail-page .detail-wish:hover{border-color:#ffbdc8;color:var(--pd-red);background:#fff8f9}
+.detail-main-info{grid-area:info;min-width:0;padding:2px 0}.detail-title-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.detail-title-meta .product-category{padding:5px 9px;border-radius:7px;background:#f4f6f8;color:#647084;font-size:10px}.detail-sku{font-size:10px;color:#9aa2ae}.detail-main-info h2{font-size:clamp(18px,2vw,23px);line-height:1.8;font-weight:800;color:#202938;margin:13px 0 3px}.detail-english{margin:0;color:#8a93a1;font-size:11px;line-height:1.9}.detail-rating-line{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin:14px 0;padding:12px 0;border-top:1px solid var(--pd-line);border-bottom:1px solid var(--pd-line);font-size:11px;color:#737e8d}.detail-rating-line span:first-child{color:#d28b12;font-weight:800}.detail-color-row{display:flex;align-items:center;gap:9px;margin:15px 0;color:#6f7886;font-size:12px}.detail-color-row b{color:#333e4d}.detail-color-dot{width:18px;height:18px;border:1px solid #d5d9df;border-radius:50%;box-shadow:0 0 0 2px #fff,0 0 0 3px #e4e7eb}.detail-highlight{margin:18px 0;padding:15px 16px;border:1px solid var(--pd-line);border-radius:12px;background:#fff}.detail-highlight>b{font-size:13px}.detail-highlight ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;padding:0 17px 0 0;margin:12px 0 0}.detail-highlight li{font-size:11px;color:#697484;line-height:1.9;padding-right:2px}.detail-specs{margin-top:18px}.detail-specs h3{font-size:14px;margin:0 0 11px}.detail-specs .product-spec-grid{border:1px solid var(--pd-line);border-radius:12px;background:#fff;gap:0;grid-template-columns:repeat(2,minmax(0,1fr))}.detail-specs .product-spec-grid>div{padding:12px 14px;border-bottom:1px solid var(--pd-line);background:#fff;gap:6px}.detail-specs .product-spec-grid>div:nth-child(odd){border-left:1px solid var(--pd-line)}.detail-specs .product-spec-grid span{font-size:10px;color:#8b94a2}.detail-specs .product-spec-grid b{font-size:11px;color:#344052;line-height:1.8}
+.detail-gallery{grid-area:gallery;position:relative;min-width:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:10px 8px}.detail-gallery-actions{position:absolute;z-index:2;top:10px;left:10px;display:flex;flex-direction:column;gap:8px}.detail-icon-action{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--pd-line);border-radius:50%;background:#fff;color:#697485;font-size:19px;box-shadow:0 2px 8px #1d29390a}.detail-icon-action:hover{color:var(--pd-red);border-color:#ffcbd3}.detail-main-image{width:100%;height:clamp(230px,28vw,360px);display:grid;place-items:center;background:#fff;border-radius:14px;overflow:hidden}.detail-main-image img{width:100%;height:100%;object-fit:contain}.detail-main-image img[hidden]{display:none}.detail-image-fallback{width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(145deg,#fafbfc,#f1f3f6);font-size:clamp(70px,9vw,120px);color:#677386}.detail-thumbnails{width:100%;display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.detail-thumb{width:66px;height:66px;padding:5px;border:1px solid #e2e5e9;border-radius:10px;background:#fff;display:grid;place-items:center;transition:.18s}.detail-thumb:hover,.detail-thumb.active{border:2px solid var(--pd-red);padding:4px}.detail-thumb img{width:100%;height:100%;object-fit:contain}.detail-thumb-emoji{font-size:28px;color:#536176}
+.detail-tabs{display:flex;align-items:center;gap:0;direction:rtl;border-bottom:1px solid var(--pd-line);margin:30px 0 20px;position:sticky;top:0;z-index:5;background:#fff;overflow-x:auto;scrollbar-width:none}.detail-tabs::-webkit-scrollbar{display:none}.detail-tab{position:relative;flex:0 0 auto;padding:16px 22px;border:0;background:#fff;color:#697484;font-size:12px;font-weight:800;white-space:nowrap}.detail-tab span{font-size:10px;color:#9aa2ad;margin-right:4px}.detail-tab:hover,.detail-tab.active{color:var(--pd-red)}.detail-tab.active:after{content:"";position:absolute;right:13px;left:13px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:var(--pd-red)}
+.detail-description,.detail-page .reviews-section,.product-questions-section{scroll-margin-top:72px;border-bottom:1px solid var(--pd-line);padding:20px 0 26px}.detail-description h3,.detail-page .reviews-heading h3,.product-questions-section .reviews-heading h3{font-size:17px;font-weight:800;color:#252f3e;margin:0 0 14px}.detail-description>p{font-size:12px;line-height:2.2;color:#697484;max-width:1000px}.detail-spec-table{max-width:100%;border-top:1px solid var(--pd-line);margin:14px 0 24px}.detail-spec-row{display:grid;grid-template-columns:minmax(130px,.38fr) minmax(0,1fr);gap:20px;padding:15px 14px;border-bottom:1px solid var(--pd-line);align-items:center;font-size:12px}.detail-spec-row:nth-child(odd){background:#fafbfc}.detail-spec-row span{color:#87909e}.detail-spec-row b{font-weight:600;color:#344052;line-height:1.9}.product-detail-note{padding:12px 14px;border-radius:9px;background:#fff9ec;border:1px solid #f4e6c8;color:#8b6b2e;font-size:10px;line-height:2}
+.detail-page .reviews-section{border-top:0;margin-top:0;padding-top:22px}.reviews-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.reviews-heading p{margin:5px 0 0;font-size:11px;color:#8a93a1}.review-average{padding:7px 11px;border-radius:8px;background:#fff8e9;color:#b87b12;font-size:12px;font-weight:900;white-space:nowrap}.review-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0;padding:12px 0;border-bottom:1px solid var(--pd-line)}.review-toolbar>b{font-size:11px;color:#586475}.review-filter-chips{display:flex;gap:7px;flex-wrap:wrap}.review-filter-chip{padding:7px 12px;border:1px solid #e2e6eb;border-radius:20px;background:#fff;color:#697484;font-size:10px}.review-filter-chip.active,.review-filter-chip:hover{border-color:#ffc4cd;background:#fff5f6;color:var(--pd-red)}.review-list{display:grid;gap:0}.review-item-detailed{display:grid;grid-template-columns:40px minmax(0,1fr);gap:13px;padding:18px 4px;border-bottom:1px solid var(--pd-line)}.review-avatar{width:38px;height:38px;display:grid;place-items:center;overflow:hidden;border-radius:50%;background:#f0f2f5;color:#657184;font-size:14px;font-weight:800}.review-avatar img{width:100%;height:100%;object-fit:cover}.review-body{min-width:0}.review-user-line{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.review-user-line b{font-size:12px}.review-user-line small{color:#9aa2ad;font-size:10px}.review-buyer{font-size:9px;color:#15966a;background:#effaf5;border-radius:5px;padding:4px 6px}.review-stars{display:block;margin:8px 0;color:#e6a12b;letter-spacing:2px;font-size:13px}.review-body>p{font-size:12px;line-height:2.1;color:#515d6d;overflow-wrap:anywhere}.review-procon{margin:9px 0;padding:10px 12px;background:#f8f9fb;border-radius:8px}.review-procon b{font-size:10px;color:#657184}.review-procon p{font-size:11px;margin:5px 0 0;color:#586475}.review-recommend{font-size:10px;margin:10px 0}.review-recommend.yes{color:#15966a}.review-recommend.no{color:#d65a64}.review-votes{display:flex;align-items:center;gap:8px;margin-top:12px;color:#8992a0;font-size:10px}.review-votes button{min-width:35px;padding:5px 8px;border:1px solid var(--pd-line);border-radius:7px;background:#fff;color:#697484;font-size:10px}.review-votes button:hover{border-color:#cfd5dd;background:#f8f9fb}.review-form,.product-question-form{max-width:760px;margin:22px 0 0;padding:18px;border:1px solid var(--pd-line);border-radius:13px;background:#fbfcfd;display:grid;gap:13px}.review-form h4{font-size:14px;margin:0}.review-form .field{display:grid;gap:7px}.review-form .field label,.product-question-form label{font-size:11px;font-weight:800;color:#4c5869}.review-form input:not([type=checkbox]),.review-form select,.review-form textarea,.product-question-form textarea{width:100%;border:1px solid #dfe3e8;border-radius:9px;background:#fff;padding:11px 12px;font-size:11px;color:#303b4b;outline:none}.review-form textarea,.product-question-form textarea{min-height:100px;resize:vertical;line-height:1.9}.review-form input:focus,.review-form select:focus,.review-form textarea:focus,.product-question-form textarea:focus{border-color:#f28b9a;box-shadow:0 0 0 3px #ef405610}.review-form .field label:has(input[type=checkbox]){display:flex;align-items:center;gap:8px;font-weight:500}.review-form input[type=checkbox]{accent-color:var(--pd-red)}.review-form button.primary,.product-question-form button{justify-self:start;min-width:145px;min-height:40px;border:1px solid var(--pd-red);border-radius:9px;background:var(--pd-red);color:#fff;font-size:11px;font-weight:800;padding:9px 16px}.review-login-note{margin-top:16px;padding:14px;border:1px dashed #dce1e7;border-radius:10px;background:#fafbfc;color:#778292;font-size:11px}
+.product-questions-section{border-top:0;margin-top:0;padding-top:22px}.product-question-list{display:grid;gap:0;margin:14px 0}.product-question{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;padding:16px 5px;border-bottom:1px solid var(--pd-line)}.question-mark{width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:#fff1f3;color:var(--pd-red);font-size:17px;font-weight:900}.product-question b{font-size:11px}.product-question small{display:inline-block;margin-right:9px;color:#9aa2ad;font-size:9px}.product-question p{margin:8px 0;font-size:12px;line-height:2;color:#4e5a6a;overflow-wrap:anywhere}.product-answer{margin-top:10px;padding:12px;border-radius:9px;background:#f5faf7;border:1px solid #e2f1e8}.product-answer b{color:#15966a}.product-answer p{margin-bottom:0}.product-question-form{margin-top:18px}
+@media(max-width:1050px){.detail-layout{grid-template-columns:minmax(210px,250px) minmax(0,1fr);grid-template-areas:"gallery info" "purchase info"}.detail-purchase{position:static}.detail-gallery{padding:0}.detail-main-image{height:270px}}
+@media(max-width:680px){.detail-page{padding:12px;border-radius:12px}.detail-topline{margin-bottom:12px}.detail-breadcrumb{font-size:10px}.detail-layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"gallery" "info" "purchase";gap:12px}.detail-gallery{padding:4px 0 12px;border-bottom:1px solid var(--pd-line)}.detail-main-image{height:250px}.detail-thumb{width:57px;height:57px}.detail-main-info h2{font-size:17px}.detail-highlight ul{grid-template-columns:1fr}.detail-specs .product-spec-grid{grid-template-columns:1fr 1fr}.detail-purchase{padding:14px}.detail-tabs{margin:20px -12px 12px;padding:0 5px;top:0}.detail-tab{padding:14px 14px;font-size:11px}.detail-description h3,.detail-page .reviews-heading h3,.product-questions-section .reviews-heading h3{font-size:15px}.detail-spec-row{grid-template-columns:105px minmax(0,1fr);gap:10px;padding:12px 8px;font-size:11px}.review-toolbar{align-items:flex-start}.review-filter-chips{width:100%}.review-filter-chip{padding:7px 9px}.review-item-detailed{grid-template-columns:32px minmax(0,1fr);gap:9px}.review-avatar{width:31px;height:31px}.review-form,.product-question-form{padding:13px}.reviews-heading{align-items:flex-start}}
+
+
+/* Product imagery and purchase panel — clean marketplace layout */
+.product-visual{position:relative;isolation:isolate;display:grid;place-items:center;overflow:hidden;height:220px;padding:14px;background:radial-gradient(circle at 50% 42%,#fff 0,#f8f9fb 62%,#f1f3f6 100%);border-bottom:1px solid #edf0f3}
+.product-visual:before{content:"";position:absolute;width:74%;height:74%;border-radius:50%;background:#fff;box-shadow:0 10px 35px #26354a0b;z-index:-1}
+.product-visual img{position:relative!important;inset:auto!important;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain!important;padding:12px!important;mix-blend-mode:multiply;transition:transform .28s ease;filter:drop-shadow(0 9px 9px #17203312)}
+.product-card:hover .product-visual img{transform:scale(1.045)}
+.product-emoji-pair{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:14px;width:100%;height:100%}
+.product-emoji-main,.product-emoji-secondary{display:grid;place-items:center;width:88px;height:88px;border:1px solid #e9edf2;border-radius:20px;background:#fff;box-shadow:0 7px 22px #25334a0b;font-size:42px}
+.product-emoji-secondary{width:62px;height:62px;border-radius:16px;font-size:29px;background:#f9fafb}
+.product-card{border:1px solid #e6e9ee;border-radius:15px;box-shadow:0 2px 10px #1d293908;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.product-card:hover{border-color:#d9dee6;box-shadow:0 12px 28px #1d293912}
+.product-info{padding:14px 15px 15px}
+.detail-page .detail-purchase{gap:0;padding:18px 19px 16px;border:1px solid #dedfe3;border-radius:13px;background:linear-gradient(180deg,#fafafa 0%,#f7f7f8 100%);box-shadow:none;color:#242936}
+.detail-seller-heading{display:flex;align-items:center;justify-content:space-between;padding:2px 0 15px;border-bottom:1px solid #dedfe3;font-size:13px}
+.detail-seller-heading>span{color:#1681e8;font-size:11px}
+.detail-page .detail-seller{grid-template-columns:34px minmax(0,1fr) auto;gap:10px;padding:15px 0 17px;border:0}
+.detail-page .seller-icon{width:34px;height:34px;background:transparent;border-radius:0;color:#333;font-size:23px}
+.detail-page .detail-seller>div{gap:7px}
+.detail-page .detail-seller b{font-size:14px;color:#30384b}
+.detail-page .detail-seller small{display:flex;align-items:center;gap:6px;color:#8b929d;font-size:10px}
+.detail-page .detail-seller small i{width:7px;height:7px;border-radius:50%;background:#16a765;display:inline-block}
+.detail-page .detail-seller strong{font-size:10px;color:#b77a17}
+.detail-stock-line{display:flex;align-items:center;gap:7px;padding:12px 0 15px;border-top:1px solid #dedfe3;color:#707987;font-size:11px}
+.stock-check{color:#159b62;font-weight:900}.stock-unavailable{color:#e34b5f}
+.detail-purchase-price-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0 2px}
+.detail-purchase-price-row>span{font-size:10px;color:#7d8490}
+.detail-page .detail-purchase-price{font-size:23px;letter-spacing:-.5px;color:#272d49}
+.detail-page .detail-purchase-price small{font-size:10px;color:#333;font-weight:500}
+.detail-price-history{display:flex;justify-content:flex-start;gap:12px;align-items:center;color:#e34b5f;font-size:10px;padding-top:5px}
+.detail-price-history del{color:#9ba1aa}
+.detail-best-price{padding:15px 0 14px;color:#168b36;font-size:11px;font-weight:800}
+.detail-page .detail-add{display:flex;align-items:center;justify-content:center;gap:8px;min-height:49px;margin:0 0 15px;border:0;border-radius:10px;background:#ef4056;color:#fff;font-size:13px;font-weight:800;box-shadow:none;transition:background .18s,transform .18s}
+.detail-page .detail-add:hover{background:#df304a;transform:translateY(-1px)}
+.detail-page .detail-add:disabled{background:#c9cbd0;opacity:1}
+.detail-cart-symbol{font-size:19px;line-height:1}
+.detail-guarantee{display:flex;align-items:center;gap:10px;min-height:54px;border-bottom:1px solid #dedfe3;color:#555d70}
+.detail-guarantee b{font-size:10px;line-height:1.9}
+.detail-line-icon{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;color:#414956;font-size:22px}
+.detail-delivery-row{display:grid;grid-template-columns:26px minmax(0,1fr) 14px;align-items:center;gap:9px;margin:0;padding:13px 0 2px;border:0;background:transparent;border-radius:0}
+.detail-delivery-row>div{display:grid;gap:7px;min-width:0}
+.detail-delivery-row b{font-size:11px;color:#4d5670}
+.detail-delivery-row small{font-size:10px;line-height:1.9;color:#9298a1}
+.detail-row-chevron{color:#a4a8af;font-size:22px}
+.detail-page .detail-wish{margin-top:12px;background:#fff;border-radius:9px;min-height:39px}
+.detail-page .detail-main-image{padding:15px;background:radial-gradient(circle at 50% 45%,#fff 0,#fff 58%,#f8f9fb 100%);border:1px solid #f0f1f3;border-radius:16px}
+.detail-page .detail-main-image img{object-fit:contain;padding:12px;filter:drop-shadow(0 12px 12px #18243a14);transition:transform .25s ease}
+.detail-page .detail-main-image img:hover{transform:scale(1.025)}
+.detail-page .detail-image-fallback{border-radius:13px;background:linear-gradient(145deg,#fff,#f0f2f5)}
+.detail-page .detail-thumb{border-radius:10px;background:#fff;box-shadow:0 2px 7px #1b293908}
+.detail-page .detail-thumb img{object-fit:contain;padding:3px}
+@media(max-width:680px){.product-visual{height:185px}.detail-page .detail-purchase{padding:15px}.detail-page .detail-purchase-price{font-size:21px}.detail-page .detail-add{min-height:48px}}
+
+
+/* پیشنهاد محصولات مشابه در انتهای جزئیات کالا */
+.detail-related-products{margin:28px 0 8px;padding:24px;border:1px solid #e5e7eb;border-radius:18px;background:#fff}
+.detail-related-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.detail-related-head h3{font-size:20px;margin:5px 0}.detail-related-head p{font-size:12px;color:#7b8494;margin:0}
+.detail-related-mark{font-size:30px;color:#b329a7}
+.detail-related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.detail-related-card{min-width:0;border:1px solid #ececf1;border-radius:14px;padding:12px;background:#fff;display:flex;flex-direction:column;gap:10px}
+.detail-related-open{border:0;background:none;text-align:right;cursor:pointer;color:inherit;display:flex;flex-direction:column;gap:8px;min-width:0}
+.detail-related-emoji{height:75px;border-radius:10px;background:#f8f5fa;display:grid;place-items:center;font-size:34px;letter-spacing:8px}
+.detail-related-open b{font-size:13px;line-height:1.8;min-height:44px}.detail-related-open small{color:#89909c;font-size:11px}
+.detail-related-open strong{font-size:13px;color:#222b42}.detail-related-add{font-size:12px;padding:8px}
+@media(max-width:700px){.detail-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-related-products{padding:14px}}
+
+/* نوین پلاس در صفحه جزئیات محصول، مطابق کارت مرجع */
+.product-plus-promo{position:relative;margin:22px 0 26px;padding:20px 22px 17px;border:1px solid #e4d7e8;border-radius:13px;background:linear-gradient(110deg,#fff 0%,#fff 70%,#fff8ff 100%);color:#30364a;overflow:hidden}
+.product-plus-promo:after{content:"✦";position:absolute;left:20px;bottom:-27px;font-size:92px;color:#b42ba6;opacity:.08;pointer-events:none}
+.product-plus-promo-top{display:flex;align-items:flex-start;gap:12px}
+.product-plus-star{color:#b42ba6;font-size:29px;line-height:1.1}
+.product-plus-eyebrow{font-size:11px;color:#b42ba6;font-weight:800}
+.product-plus-promo h3{margin:3px 0 5px;font-size:19px;color:#b42ba6}
+.product-plus-promo p{margin:0;color:#72798a;font-size:12px;line-height:1.9}
+.product-plus-promo-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 20px;margin:16px 0 14px;padding:13px 0;border-top:1px solid #f0e7f1;border-bottom:1px solid #f0e7f1;font-size:12px;color:#4c566b}
+.product-plus-promo-benefits span:first-letter{color:#159b62}
+.product-plus-promo-link{display:inline-flex;align-items:center;gap:9px;color:#1675e8;text-decoration:none;font-size:13px;font-weight:800}
+.product-plus-promo-link b{font-size:22px;line-height:1}
+.product-plus-promo>small{display:block;margin-top:9px;color:#9298a4;font-size:10px}
+.detail-color-picker{width:100%;display:grid;gap:10px}
+.detail-color-picker-head{display:flex;align-items:center;gap:8px;font-size:12px;color:#30384b}
+.detail-color-picker-head span{color:#70798b;font-weight:700}
+.detail-color-swatches{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+/* انتخاب رنگِ مستقل، هم‌استایل با دکمه‌های نسخه گوشی؛ بخش نسخه‌ها دست‌نخورده می‌ماند. */
+.detail-color-swatch{display:inline-flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:7px 12px;border:1px solid #dfe2e8;border-radius:9px;background:#fff;color:#454d5d;font:inherit;font-size:12px;cursor:pointer;transition:.16s}
+.detail-color-swatch>span{display:block;flex:0 0 15px;width:15px;height:15px;border-radius:50%;background:var(--swatch-color);border:1px solid #d9dce2;box-shadow:inset 0 0 0 2px #fff}
+.detail-color-swatch small{font-size:12px;white-space:nowrap}
+.detail-color-swatch:hover{border-color:#b52ba8;color:#a32399}
+.detail-color-swatch.active{border-color:#b52ba8;background:#fff7ff;color:#a32399;font-weight:800;box-shadow:0 0 0 1px #b52ba8 inset}
+.detail-color-swatch.active>span{outline:2px solid #b52ba8;outline-offset:2px}
+@media(max-width:680px){.product-plus-promo{padding:16px;margin:17px 0}.product-plus-promo h3{font-size:17px}.product-plus-promo-benefits{grid-template-columns:1fr;gap:8px}.detail-color-swatches{gap:6px}.detail-color-swatch{min-height:34px;padding:6px 10px}}
+
+/* اجزای تکمیلی صفحه محصول بر اساس نمای فروشگاهی مرجع */
+.detail-action-strip{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 16px;padding:10px 0;border-top:1px solid #f0f0f2;border-bottom:1px solid #f0f0f2}
+.detail-action-strip button,.detail-price-alert{border:1px solid #e7e8ed;border-radius:8px;background:#fff;color:#5b6474;padding:8px 11px;font-size:11px;cursor:pointer;transition:.18s}
+.detail-action-strip button:hover,.detail-price-alert:hover{border-color:#b52ba8;color:#a32399;background:#fff8ff}
+.detail-price-alert{width:100%;margin:8px 0 13px;text-align:right}
+.detail-page .detail-purchase{align-self:start}
+.detail-page .detail-delivery-row{border-bottom:1px solid #eceef1;padding:12px 0}
+.detail-page .detail-delivery-row:last-of-type{border-bottom:0}
+.detail-page .detail-main-info{min-width:0}
+.detail-page .detail-rating-line{display:flex;align-items:center;flex-wrap:wrap;gap:13px}
+.detail-page .detail-rating-line span{font-size:11px}
+.detail-page .detail-gallery-actions{display:flex;gap:7px;justify-content:flex-end}
+.detail-page .detail-thumb{width:54px;height:54px}
+@media(max-width:680px){.detail-action-strip{gap:5px}.detail-action-strip button{font-size:10px;padding:7px 8px}.detail-page .detail-rating-line{gap:8px}}
+
+/* Final marketplace review layout: loaded after the global stylesheet */
+.marketplace-reviews{direction:rtl;margin-top:26px;padding-top:22px;color:#252b39}
+.market-review-top{display:grid;grid-template-columns:minmax(180px,1fr) 150px minmax(210px,1.15fr) minmax(190px,1fr);gap:18px;align-items:center;padding:20px 18px;border:1px solid #e3e5eb;border-radius:14px;background:#fff}
+.review-section-kicker{display:block;color:#e83c55;font-size:10px;font-weight:800;margin-bottom:6px}.market-review-title h3{font-size:17px;margin:0 0 7px}.market-review-title p,.market-review-cta p{font-size:11px;color:#8a909d;line-height:1.9;margin:0}
+.market-review-score{display:grid;justify-items:center;gap:4px;border-left:1px solid #eceef2;border-right:1px solid #eceef2;padding:8px}.market-review-score>strong{font-size:38px;line-height:1;color:#22283a;font-weight:800}.market-review-score .review-stars{font-size:16px;letter-spacing:2px;margin:0}.market-review-score small{font-size:9px;color:#9298a4;text-align:center}
+.market-review-bars{display:grid;gap:7px}.review-score-bar{display:grid;grid-template-columns:48px minmax(45px,1fr) 20px;align-items:center;gap:8px;font-size:10px;color:#737b89}.review-score-bar>div{height:7px;border-radius:20px;background:#eff0f3;overflow:hidden}.review-score-bar i{display:block;height:100%;border-radius:20px;background:#f5a623}.review-score-bar small{text-align:left;color:#8b919d;font-size:9px}
+.market-review-cta{border-right:1px solid #eceef2;padding-right:17px}.market-review-cta>b{font-size:12px}.market-review-cta .primary{margin-top:10px;min-width:125px;background:#f23859;border-radius:7px;font-size:11px}
+.review-summary-box{display:flex;align-items:flex-start;gap:12px;margin:17px 0;padding:17px 18px;border-radius:12px;background:#f4f6ff;border:1px solid #edf0ff}.review-summary-icon{flex:0 0 31px;width:31px;height:31px;display:grid;place-items:center;border-radius:10px;background:#e7eaff;color:#6574e9;font-size:18px}.review-summary-box b{font-size:13px}.review-summary-box p{font-size:11px;line-height:2.1;color:#596174;margin:6px 0 0}
+.marketplace-review-toolbar{border-top:1px solid #e7e9ef;margin-top:18px;padding:18px 0 14px}.marketplace-review-toolbar>b{font-size:14px}.marketplace-review-toolbar .review-filter-chip{border-radius:9px;padding:8px 12px;font-size:10px}.review-sort-select{display:flex;align-items:center;gap:7px;margin-right:auto;font-size:10px;color:#777f8d}.review-sort-select select{border:1px solid #e0e3e9;border-radius:8px;padding:8px 10px;background:#fff;color:#4c5363;font:inherit}
+.review-item-detailed[hidden]{display:none!important}.review-item-detailed .review-body{min-width:0}.review-title{font-size:13px;margin:9px 0 3px;color:#252b39}.review-buyer.is-bot{background:#f1eaff;color:#7b45b4}.review-procon.positive b{color:#168653}.review-procon.negative b{color:#d14b5b}.review-empty-state{padding:35px 15px;text-align:center;border:1px dashed #dfe2e9;border-radius:12px;color:#818896}.review-empty-state span{display:block;font-size:30px;color:#e7a52a}.review-empty-state b{display:block;font-size:13px;color:#3e4656;margin:7px}.review-empty-state p{font-size:11px;margin:0}
+.marketplace-review-form{margin-top:24px;padding:20px;border:1px solid #e3e5eb;border-radius:13px;background:#fff;max-width:none;grid-template-columns:1fr 1fr}.review-form-heading{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid #eceef2}.review-form-heading h4{margin:0;font-size:15px}.review-form-heading>span{font-size:23px;color:#e83c55}.marketplace-review-form .field.full-field{grid-column:1/-1}.marketplace-review-form .field label{font-size:11px}.marketplace-review-form input,.marketplace-review-form select,.marketplace-review-form textarea{font-family:inherit}.marketplace-review-form button[type=submit]{min-width:160px;background:#f23859;border-radius:8px}
+@media(max-width:900px){.market-review-top{grid-template-columns:1fr 130px 1fr}.market-review-cta{grid-column:1/-1;border-right:0;border-top:1px solid #eceef2;padding:14px 0 0}.market-review-score{border-left:0}}
+@media(max-width:620px){.market-review-top{grid-template-columns:1fr 110px;gap:13px;padding:14px}.market-review-title h3{font-size:15px}.market-review-score>strong{font-size:32px}.market-review-bars,.market-review-cta{grid-column:1/-1}.marketplace-review-toolbar{align-items:flex-start}.marketplace-review-toolbar .review-filter-chips{width:100%}.review-sort-select{margin-right:0}.marketplace-review-form{grid-template-columns:1fr;padding:14px}.marketplace-review-form .field{grid-column:1/-1}.review-user-line small{width:100%;margin-right:0}.review-item-detailed{gap:9px}}
+
+/* Product detail interactive controls */
+.detail-seller-alternatives{border:0;background:transparent;color:var(--primary,#2875d7);font:inherit;font-size:12px;cursor:pointer;padding:4px 0}
+.detail-delivery-row{width:100%;text-align:right;cursor:pointer;font:inherit;color:inherit;background:transparent;border:0}
+.detail-delivery-row:hover,.detail-seller-alternatives:hover{color:var(--primary,#2875d7)}
+.detail-delivery-row:focus-visible,.detail-seller-alternatives:focus-visible{outline:2px solid var(--primary,#2875d7);outline-offset:3px;border-radius:8px}
+
+/* انتخاب بیمه در صفحه محصول و تنظیمات بیمه در مدیریت */
+.product-insurance-box{margin:14px 0;padding:13px;border:1px solid #e8d9ed;border-radius:12px;background:#fffaff;display:grid;gap:9px}
+.product-insurance-box>span,.product-insurance-box>small{font-size:11px;line-height:1.8;color:#747b89}
+.insurance-choice{display:flex;align-items:center;gap:9px;padding:9px;border:1px solid #ece7ef;border-radius:9px;background:#fff;cursor:pointer}
+.insurance-choice:has(input:checked){border-color:#b42ba6;background:#fff7ff}
+.insurance-choice input{accent-color:#b42ba6;flex:0 0 auto}
+.insurance-choice>span{display:grid;gap:3px;flex:1}
+.insurance-choice b{font-size:11px;color:#34394b}
+.insurance-choice small{font-size:10px;color:#818796;line-height:1.7}
+.insurance-choice strong{font-size:11px;color:#a32399}
+.insurance-admin-option{display:grid;grid-template-columns:minmax(130px,1fr) minmax(130px,1fr) minmax(150px,1.4fr);align-items:center;gap:9px;padding:10px;border:1px solid #eceef2;border-radius:10px;background:#fff;margin:8px 0}
+.insurance-admin-option label{font-size:12px;font-weight:700}
+.insurance-admin-option input[type=number],.insurance-admin-option input:not([type=checkbox]){width:100%;min-width:0;border:1px solid #dfe3e9;border-radius:8px;padding:9px;font:inherit;font-size:11px}
+@media(max-width:640px){.insurance-admin-option{grid-template-columns:1fr}.insurance-choice{align-items:flex-start}}
+
+/* Product comparison dialog */
+.compare-table-wrap{width:100%;overflow:auto;margin:16px 0;border:1px solid #e7e7ee;border-radius:12px;background:#fff}
+.compare-table{width:100%;min-width:520px;border-collapse:collapse;text-align:center;font-size:13px}
+.compare-table th,.compare-table td{padding:12px 10px;border-bottom:1px solid #ececf1;vertical-align:middle}
+.compare-table thead th{background:#f8f6fb;color:#32233c;font-weight:800}
+.compare-table tbody th{position:sticky;right:0;background:#fafafa;text-align:right;white-space:nowrap;color:#555}
+.compare-table td{min-width:130px;color:#333}
+.compare-table .outline.small{margin-top:8px;padding:5px 10px;font-size:11px}
+.detail-action-strip [data-open-compare]{border-color:#d8c6e8;color:#922a9c}
+@media(max-width:640px){.compare-table{font-size:12px}.compare-table th,.compare-table td{padding:9px 7px}}
+
+/* نسخه گوشی با همان الگوی انتخاب رنگ در صفحه محصول */
+.phone-variant-picker{display:grid;gap:13px;margin:16px 0;padding:15px;border:1px solid #e6e8ee;border-radius:14px;background:#fff}
+.phone-variant-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.phone-variant-heading b{font-size:14px;color:#252b38}
+.phone-variant-heading small{font-size:11px;color:#8991a1}
+.phone-variant-choice-group{display:grid;gap:8px}
+.phone-variant-choice-title{font-size:12px;font-weight:800;color:#454d5d}
+.phone-variant-choice-options{display:flex;flex-wrap:wrap;gap:8px}
+.phone-variant-chip{min-height:36px;padding:7px 13px;border:1px solid #dfe2e8;border-radius:9px;background:#fff;color:#454d5d;font:inherit;font-size:12px;cursor:pointer;transition:.16s}
+.phone-variant-chip:hover{border-color:#b52ba8;color:#a32399}
+.phone-variant-chip.active{border-color:#b52ba8;background:#fff7ff;color:#a32399;font-weight:800;box-shadow:0 0 0 1px #b52ba8 inset}
+.phone-variant-price{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:10px;border-top:1px solid #eee;font-size:12px;color:#596174}
+.phone-variant-price strong{font-size:17px;color:#a32399}
+.phone-variant-picker>small{font-size:11px;color:#7b8494}
+@media(max-width:560px){.phone-variant-picker{padding:12px}.phone-variant-chip{min-height:34px;padding:6px 10px}}
+
+/* Novin Shop: remove browser-default underlines from site links */
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+}
+/* Keep keyboard navigation visible without underlining link text. */
+a:focus-visible {
+  outline: 2px solid var(--primary, #5267e8);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
